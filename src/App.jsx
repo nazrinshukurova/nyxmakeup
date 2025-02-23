@@ -1,16 +1,22 @@
 import React from "react";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
 import Navbar from "./components/Navbar";
-import VideoContainer from "./components/VideoContainer";
-import Button from "./shared/Button";
-import Headers from "./components/Headers";
+// import NoPage from "./pages/NoPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <VideoContainer />
-      {/* <Headers /> */}
-    </div>
+    <BrowserRouter>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          {/* <Route path="*" element={<NoPage />} /> */}
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 

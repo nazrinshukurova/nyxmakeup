@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-black w-[100%] h-[160px] flex flex-col gap-8 items-center justify-center">
+      <nav className="sticky bg-black w-[100%] h-[160px] flex flex-col gap-8 items-center justify-center">
         <div>
           <img src={logo} className="w-[190px] h-[59px]" alt="Logo" />
         </div>
@@ -17,7 +17,9 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                className={location.pathname === "/" ? "text-lg" : ""}
+                className={
+                  location.pathname === "/" ? "text-lg text-orange-400" : ""
+                }
               >
                 Home
               </Link>
@@ -25,7 +27,11 @@ const Navbar = () => {
             <li>
               <Link
                 to="/products"
-                className={location.pathname === "/products" ? "text-xl" : ""}
+                className={
+                  location.pathname === "/products"
+                    ? "text-lg text-green-400"
+                    : ""
+                }
               >
                 Products
               </Link>

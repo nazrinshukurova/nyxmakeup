@@ -31,7 +31,19 @@
   font-style: 700;
 }
 
-.shop-button,.get-ready,.second-content-title {
+.shop-button,
+.get-ready,
+.second-content-title {
   font-family: "Titling Gothic", sans-serif;
- 
+}
+
+.product-card {
+  width: fit-content;
+  height:580px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: 0.5s ease-in-out all;
 }

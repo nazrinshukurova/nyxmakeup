@@ -1,0 +1,25 @@
+@import "tailwindcss";
+:root {
+  --search-bg: rgb(241, 241, 241);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MyCustomFont", sans-serif;
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./assets/fonts/Futura-Book.woff2") format("woff2"),
+    url("./assets/fonts/Futura-Book.woff") format("woff"),
+    url("./assets/fonts/Futura-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.searchBox {
+  padding-left: 10px;
+}
+

@@ -1,10 +1,14 @@
 import React from "react";
 import logo from "../assets/images/indir.png";
 import Search from "../shared/Search";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const Navbar = () => {
-  const location = useLocation();
+  const [searchParams] = useSearchParams();
+
+  const isActive = (param) => {
+    return searchParams.get("page") === param;
+  };
 
   return (
     <div>
@@ -16,22 +20,16 @@ const Navbar = () => {
           <ul className="text-white flex gap-9 text-[0.875rem] font-semibold">
             <li>
               <Link
-                to="/"
-                className={
-                  location.pathname === "/" ? "text-lg text-orange-400" : ""
-                }
+                to="/?page=home"
+                className={isActive("home") ? "text-lg text-orange-400" : ""}
               >
                 Home
               </Link>
             </li>
             <li>
               <Link
-                to="/products"
-                className={
-                  location.pathname === "/products"
-                    ? "text-lg text-green-400"
-                    : ""
-                }
+                to="/products?page=products"
+                className={isActive("products") ? "text-lg text-green-400" : ""}
               >
                 Products
               </Link>

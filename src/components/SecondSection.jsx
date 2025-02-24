@@ -1,6 +1,5 @@
 import React from "react";
 import image2 from "../assets/images/second.jpg";
-import ProductsNyx from "./ProductsNyx";
 import SlideShow from "./SlidesShow/SlideShow";
 
 const SecondSection = () => {

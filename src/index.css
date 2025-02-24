@@ -1,4 +1,6 @@
 @import "tailwindcss";
+
+
 :root {
   --search-bg: rgb(241, 241, 241);
 }
@@ -15,7 +17,6 @@
   src: url("./assets/fonts/Futura-Book.woff2") format("woff2"),
     url("./assets/fonts/Futura-Book.woff") format("woff"),
     url("./assets/fonts/Futura-Book.ttf") format("truetype");
-  font-weight: normal;
   font-style: normal;
 }
 
@@ -33,17 +34,22 @@
 
 .shop-button,
 .get-ready,
-.second-content-title {
+.second-content-title,
+.product-detail-name {
   font-family: "Titling Gothic", sans-serif;
 }
 
 .product-card {
   width: fit-content;
-  height:580px;
+  height: 580px;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
   transition: 0.5s ease-in-out all;
+}
+
+.product-details-price {
+  margin-top: 50px;
 }

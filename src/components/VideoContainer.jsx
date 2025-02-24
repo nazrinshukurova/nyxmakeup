@@ -13,7 +13,7 @@ const VideoContainer = () => {
         muted
         playsInline
       />
-      <Headers/>
+      <Headers />
     </div>
   );
 };

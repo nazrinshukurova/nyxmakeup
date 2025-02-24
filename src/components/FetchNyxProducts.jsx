@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import SpinnerBox from "../shared/SpinnerBox";
 const FetchNyxProducts = ({ onDataLoaded }) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -27,7 +27,7 @@ const FetchNyxProducts = ({ onDataLoaded }) => {
     fetchData();
   }, [onDataLoaded]);
 
-  if (loading) return <div className="flex justify-center ">Loading...</div>;
+  if (loading) return <SpinnerBox />;
   if (error) return <div>Error: {error}</div>;
 
   return null;

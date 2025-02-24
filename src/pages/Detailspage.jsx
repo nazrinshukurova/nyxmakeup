@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import SpinnerBox from "../shared/SpinnerBox";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -33,7 +34,12 @@ const ProductDetails = () => {
     fetchProduct();
   }, [id]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading)
+    return (
+      <div>
+        <SpinnerBox />
+      </div>
+    );
   if (error) return <div>Error: {error}</div>;
   if (!product) return <div>Product not found.</div>;
 
@@ -71,7 +77,7 @@ const ProductDetails = () => {
           )}
           <Link
             to="/"
-            className=" back-button flex items-center justify-center bg-[#e00085] text-[17px] w-[200px] h-[40px] text-white"
+            className="back-button flex items-center justify-center bg-[#e00085] text-[17px] w-[200px] h-[40px] text-white"
           >
             Back to Products
           </Link>

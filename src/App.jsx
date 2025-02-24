@@ -1,9 +1,7 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
-import Navbar from "./components/Navbar";
-// import NoPage from "./pages/NoPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Detailspage from "./pages/Detailspage";
 import ErrorPage from "./pages/ErrorPage";
 

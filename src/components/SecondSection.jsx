@@ -11,7 +11,6 @@ const SecondSection = () => {
         <p className="text-black text-[2.85rem] second-content-title">
           IN 4 NEW SHEER SHADES
         </p>
-        {/* <ProductsNyx/> */}
         <SlideShow/>
       </div>
     </div>

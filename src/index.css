@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   --search-bg: rgb(241, 241, 241);
 }
@@ -51,5 +50,8 @@
 }
 
 .product-details-price {
-  margin-top: 50px;
+  margin-top: 8px;
+}
+.back-button {
+  margin-top: 8px;
 }

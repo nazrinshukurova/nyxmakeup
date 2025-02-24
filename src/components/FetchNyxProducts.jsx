@@ -15,7 +15,7 @@ const FetchNyxProducts = ({ onDataLoaded }) => {
           throw new Error(`HTTP error! Status: ${res.status}`);
         }
         const data = await res.json();
-        onDataLoaded(data.slice(7, 58)); 
+        onDataLoaded(data.slice(7, 58));
       } catch (err) {
         console.error("Fetch error:", err);
         setError(err.message);
@@ -27,7 +27,7 @@ const FetchNyxProducts = ({ onDataLoaded }) => {
     fetchData();
   }, [onDataLoaded]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="flex justify-center ">Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return null;

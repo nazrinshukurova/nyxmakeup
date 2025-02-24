@@ -8,8 +8,8 @@ const ProductsNyx = () => {
   return (
     <>
       <FetchNyxProducts onDataLoaded={setData} />
-      {data.length === 0 ? (
-        <div>No products found.</div>
+      {data.length < 0 ? (
+        <div className="text-[18px]">No products found.😕</div>
       ) : (
         <div className="flex flex-wrap justify-between items-center gap-2.5 mt-10">
           {data.map((item) => (
@@ -41,7 +41,7 @@ const ProductsNyx = () => {
               <h3 className="text-[0.875rem] font-bold ">${item.price}</h3>
               <Link
                 to={`/product/${item.id}`}
-                className="text-blue-500 underline text-sm mt-2"
+                className="flex bg-[#e00085] w-[100px] h-[30px] justify-center items-center text-[15px] text-[#fff]"
               >
                 View Details
               </Link>

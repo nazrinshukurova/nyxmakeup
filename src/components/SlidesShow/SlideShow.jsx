@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Fade } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
+import Slider from "react-animated-slider";
+import "react-animated-slider/build/horizontal.css";
 
 const SlideShow = () => {
   const [data, setData] = useState([]);
@@ -34,9 +34,7 @@ const SlideShow = () => {
     return <div className="text-center text-lg font-semibold">Loading...</div>;
   if (error)
     return (
-      <div className="text-center text-red-500 font-semibold">
-        Error: {error}
-      </div>
+      <div className="text-center text-red-500 font-semibold">Error: {error}</div>
     );
   if (!data.length)
     return <div className="text-center text-gray-500">No products found.</div>;
@@ -46,30 +44,24 @@ const SlideShow = () => {
     .slice(0, 5);
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-1/2">
-        <Fade>
-          {filteredBronzer.map((item, index) => (
-            <div key={index} className="flex flex-col items-center p-4">
-              <img
-                className="w-[200px] h-auto rounded-lg"
-                src={item.image_link}
-                alt={item.name}
-              />
-              <h2 className="mt-2 text-lg font-semibold text-center">
-                {item.name}
-              </h2>
-              <p className="text-gray-700 font-semibold text-center text-[#000]">
-                ${item.price}
-              </p>
-              <p className="text-gray-700 font-normal text-center text-[#000]">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </Fade>
-      </div>
-    </div>
+    <Slider>
+      {filteredBronzer.map((item, index) => (
+        <div key={index} className="flex flex-col items-center p-4">
+          <img
+            className="w-[200px] h-auto rounded-lg"
+            src={item.image_link}
+            alt={item.name}
+          />
+          <h2 className="mt-2 text-lg font-semibold text-center">{item.name}</h2>
+          <p className="text-gray-700 font-semibold text-center text-[#000]">
+            ${item.price}
+          </p>
+          <p className="text-gray-700 font-normal w-[400px] text-center text-[#000]">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </Slider>
   );
 };
 

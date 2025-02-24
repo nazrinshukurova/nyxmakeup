@@ -16,6 +16,7 @@
     "@mui/material": "^6.4.5",
     "@tailwindcss/vite": "^4.0.8",
     "react": "^19.0.0",
+    "react-animated-slider": "^1.1.4",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
     "react-slideshow-image": "^4.3.2",

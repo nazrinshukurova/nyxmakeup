@@ -41,7 +41,7 @@ const ProductsNyx = () => {
               <h3 className="text-[0.875rem] font-bold ">${item.price}</h3>
               <Link
                 to={`/product/${item.id}`}
-                className="flex bg-[#e00085] w-[100px] h-[30px] justify-center items-center text-[15px] text-[#fff]"
+                className="flex bg-[#e00085] w-[100px] h-[30px] justify-center items-center text-[15px] text-[#fff]  hover:bg-white hover:border-1 hover:border-[#e00085] hover:text-[#e00085] duration-300 ease-in"
               >
                 View Details
               </Link>

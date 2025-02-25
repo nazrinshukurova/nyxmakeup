@@ -21,7 +21,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/?page=home"
-                className={isActive("home") ? "text-lg text-orange-400" : ""}
+                className={isActive("home") ? "text-md text-pink-400" : ""}
               >
                 Home
               </Link>
@@ -29,7 +29,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/products?page=products"
-                className={isActive("products") ? "text-lg text-green-400" : ""}
+                className={isActive("products") ? "text-md text-pink-400" : ""}
               >
                 Products
               </Link>
@@ -37,12 +37,19 @@ const Navbar = () => {
             <li>
               <Link
                 to="/tools?page=tools"
-                className={isActive("tools") ? "text-lg text-blue-400" : ""}
+                className={isActive("tools") ? "text-md text-pink-400" : ""}
               >
                 Tools&Services
               </Link>
             </li>
-            <li>Explore</li>
+            <li>
+              <Link
+                to="/explore?page=explore"
+                className={isActive("explore") ? "text-md text-pink-400" : ""}
+              >
+                Explore
+              </Link>
+            </li>
           </ul>
           <Search />
         </div>

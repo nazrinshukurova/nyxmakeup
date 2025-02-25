@@ -77,7 +77,7 @@ const ProductDetails = () => {
           )}
           <Link
             to="/products"
-            className="back-button flex items-center justify-center bg-[#e00085] text-[17px] w-[200px] h-[40px] text-white"
+            className="back-button duration-300 ease-in hover:bg-white hover:border-1 hover:border-[#e00085] hover:text-[#e00085] flex items-center justify-center bg-[#e00085] text-[17px] w-[200px] h-[40px] text-white"
           >
             Back to Products
           </Link>

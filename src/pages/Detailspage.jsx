@@ -76,7 +76,7 @@ const ProductDetails = () => {
             </div>
           )}
           <Link
-            to="/"
+            to="/products"
             className="back-button flex items-center justify-center bg-[#e00085] text-[17px] w-[200px] h-[40px] text-white"
           >
             Back to Products

@@ -2,6 +2,7 @@ import React from "react";
 import searchSvg from "../assets/Svg/Search.svg";
 
 const Search = () => {
+  
   return (
     <div className="border border-white  w-[12.375rem] h-[35px]  bg-[var(--search-bg)] flex items-center">
       <input

@@ -5,7 +5,7 @@ import Headers from './Headers'
 const ThirdSection = () => {
   return (
     <div>
-      <div className="w-full h-screen overflow-hidden relative z-[-1]">
+      <div className="w-full h-screen overflow-hidden relative z-[100000]">
       <video
         src={video2}
         className="w-full h-full object-cover"

@@ -4,7 +4,7 @@ import Headers from "./Headers";
 
 const VideoContainer = () => {
   return (
-    <div className="w-full h-screen overflow-hidden relative z-[-1]">
+    <div className="w-full h-screen overflow-hidden relative z-[1000000]">
       <video
         src={video}
         className="w-full h-full object-cover"

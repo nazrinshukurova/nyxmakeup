@@ -42,7 +42,8 @@
 .get-ready,
 .second-content-title,
 .product-detail-name,
-.c-content-hero__title {
+.c-content-hero__title,
+.content-title {
   font-family: "Titling Gothic", sans-serif;
 }
 
@@ -76,4 +77,8 @@
 
 .c-content-tile__section {
   margin: 30px;
+}
+
+.c-content-tile__section_third {
+  margin: 50px;
 }

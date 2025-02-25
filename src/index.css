@@ -31,13 +31,20 @@
   font-style: 700;
 }
 
+@font-face {
+  font-family: "Futura Bold";
+  src: url("./assets/fonts/futura_bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .shop-button,
 .get-ready,
 .second-content-title,
-.product-detail-name {
+.product-detail-name,
+.c-content-hero__title {
   font-family: "Titling Gothic", sans-serif;
 }
-
 
 .product-card {
   width: fit-content;
@@ -55,4 +62,18 @@
 }
 .back-button {
   margin-top: 8px;
+}
+
+.tool-text {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tool-text-group {
+  margin-left: 40px;
+}
+
+.c-content-tile__section {
+  margin: 30px;
 }

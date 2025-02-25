@@ -34,7 +34,14 @@ const Navbar = () => {
                 Products
               </Link>
             </li>
-            <li>Tools&Services</li>
+            <li>
+              <Link
+                to="/tools?page=tools"
+                className={isActive("tools") ? "text-lg text-blue-400" : ""}
+              >
+                Tools&Services
+              </Link>
+            </li>
             <li>Explore</li>
           </ul>
           <Search />

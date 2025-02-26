@@ -8,6 +8,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [color, setColor] = useState("#000");
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -67,12 +68,28 @@ const ProductDetails = () => {
               <h4 className="text-[#e00085] text-[18px] font-extralight product-details-price">
                 Colors:
               </h4>
-              <p className="text-[14px] font-extralight product-details-price ">
-                {product.product_colors
-                  .map((el) => el.colour_name)
-                  .slice(0, 7)
-                  .join(", ")}
-              </p>
+
+              <div className="flex flex-col gap-2">
+                <p className="text-[14px] font-extralight product-details-price ">
+                  {product.product_colors
+                    .map((el) => el.colour_name)
+                    .slice(0, 10)
+                    .join(",")}
+                </p>
+                <div className="flex gap-2">
+                  {product?.product_colors?.map((el, index) => (
+                    <div
+                      key={index}
+                      className="w-[40px] h-[40px] rounded-full border-2"
+                      style={{
+                        backgroundColor: el.hex_value,
+                        borderColor:
+                          color === el.hex_value ? "black" : "transparent",
+                      }}
+                    ></div>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
           <Link

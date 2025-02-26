@@ -34,7 +34,7 @@ const ProductsNyx = () => {
                   Colors:{" "}
                   {item.product_colors
                     .map((el) => el.colour_name)
-                    .slice(0, 10)
+                    .slice(0,6)
                     .join(",")}
                 </h4>
               )}

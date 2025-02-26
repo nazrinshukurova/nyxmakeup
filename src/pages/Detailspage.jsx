@@ -71,12 +71,9 @@ const ProductDetails = () => {
 
               <div className="flex flex-col gap-2">
                 <p className="text-[14px] font-extralight product-details-price ">
-                  {product.product_colors
-                    .map((el) => el.colour_name)
-                    .slice(0, 10)
-                    .join(",")}
+                  {product.product_colors.map((el) => el.colour_name).join(",")}
                 </p>
-                <div className="flex gap-2">
+                <div className="flex gap-1 max-w-[600px] flex-wrap">
                   {product?.product_colors?.map((el, index) => (
                     <div
                       key={index}

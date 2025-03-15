@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="sticky bg-black w-[100%] h-[160px] flex flex-col gap-8 items-center justify-center">
+      <nav className="sticky  bg-black w-[100%] h-[160px] flex flex-col gap-8 items-center justify-center">
         <div>
           <img src={logo} className="w-[190px] h-[59px]" alt="Logo" />
         </div>

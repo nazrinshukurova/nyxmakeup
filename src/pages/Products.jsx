@@ -2,7 +2,6 @@ import React from "react";
 import image3 from "../assets/images/202401XX-DMI-NGL-CLP-Banner-SP24Reset-VRML-Desktop-2880x540.jpg";
 import ProductsData from "../components/ProductsNyx";
 import Navbar from "../components/Navbar";
-import { Link } from "react-router-dom";
 
 const Products = () => {
   return (

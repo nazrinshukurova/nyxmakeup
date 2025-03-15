@@ -4,7 +4,7 @@ import SlideShow from "./SlidesShow/SlideShow";
 
 const SecondSection = () => {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between ">
       <img className="w-[50%]" src={image2}></img>
       <div className="bg-[#bd5eba] w-[50%] flex flex-col justify-center items-center">
         <p className="text-black text-[2.85rem] second-content-title">

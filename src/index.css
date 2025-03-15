@@ -82,3 +82,8 @@
 .c-content-tile__section_third {
   margin: 50px;
 }
+
+.quantity-border {
+  padding: 5px 15px;
+  margin: 10px;
+}

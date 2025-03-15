@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice.js";
 import Navbar from "../components/Navbar";
 import SpinnerBox from "../shared/SpinnerBox";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [color, setColor] = useState("#000");
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -34,6 +38,12 @@ const ProductDetails = () => {
 
     fetchProduct();
   }, [id]);
+
+  const handleAddToCart = () => {
+    if (product) {
+      dispatch(addToCart({ ...product, quantity }));
+    }
+  };
 
   if (loading)
     return (
@@ -77,21 +87,47 @@ const ProductDetails = () => {
                   {product?.product_colors?.map((el, index) => (
                     <div
                       key={index}
-                      className="w-[40px] h-[40px] rounded-full border-2"
+                      className="w-[40px] h-[40px] rounded-full border-2 cursor-pointer"
                       style={{
                         backgroundColor: el.hex_value,
                         borderColor:
                           color === el.hex_value ? "black" : "transparent",
                       }}
+                      onClick={() => setColor(el.hex_value)}
                     ></div>
                   ))}
                 </div>
               </div>
             </div>
           )}
+
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 border border-black px-4 py-2 quantity-border">
+              <button
+                onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
+                className="
+                 text-sm font-bold text-gray-700 cursor-pointer  "
+              >
+                -
+              </button>
+              <span className="mx-3 text-m">{quantity}</span>
+              <button
+                onClick={() => setQuantity((prev) => prev + 1)}
+                className="
+                 text-sm font-bold text-gray-700 cursor-pointer "
+              >
+                +
+              </button>
+            </div>
+
+            <div className="text-[18px] font-extralight">
+              ${(quantity * product.price).toFixed(2)}
+            </div>
+          </div>
+
           <Link
             to="/products"
-            className="back-button duration-300 ease-in hover:bg-white hover:border-1 hover:border-[#e00085] hover:text-[#e00085] flex items-center justify-center bg-[#e00085] text-[17px] w-[200px] h-[40px] text-white"
+            className="back-button duration-300 ease-in hover:bg-white hover:border-1 hover:border-[#e00085] hover:text-[#e00085] flex items-center justify-center bg-[#e00085] text-[17px] w-[200px] h-[40px] text-white mt-4"
           >
             Back to Products
           </Link>

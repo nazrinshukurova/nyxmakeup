@@ -49,7 +49,7 @@
 
 .product-card {
   width: fit-content;
-  height: 580px;
+  height: 600px;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
@@ -86,4 +86,21 @@
 .quantity-border {
   padding: 5px 15px;
   margin: 10px;
+}
+
+.add-to-card {
+  margin: 10px;
+}
+
+.basket-box {
+  height: 100vh;
+}
+
+.basket-sub-box {
+  margin: 50px;
+  padding: 10px;
+}
+
+.basket-title{
+  margin-top: 20px;
 }

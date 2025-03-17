@@ -8,9 +8,7 @@ import ToolsServices from "./pages/ToolsServices";
 import Explore from "./pages/Explore";
 import { store } from "./app/store";
 import ProductDetails from "./pages/Detailspage";
-
-
-
+import Basket from "./pages/Basketpage";
 
 const App = () => {
   return (
@@ -22,6 +20,7 @@ const App = () => {
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/tools" element={<ToolsServices />} />
           <Route path="/explore" element={<Explore />} />
+          <Route path="/basket" element={<Basket />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

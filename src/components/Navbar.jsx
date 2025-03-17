@@ -50,6 +50,14 @@ const Navbar = () => {
                 Explore
               </Link>
             </li>
+            <li>
+              <Link
+                to="/basket?page=basket"
+                className={isActive("basket") ? "text-md text-pink-400" : ""}
+              >
+                Basket
+              </Link>
+            </li>
           </ul>
           <Search />
         </div>

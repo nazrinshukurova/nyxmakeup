@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart, updateQuantity } from "../redux/cartSlice";
-import Navbar from "../components/Navbar";
 
 const Basket = () => {
   const dispatch = useDispatch();
